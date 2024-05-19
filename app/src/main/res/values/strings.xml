@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Csaladfa_Kutatas</string>
+    <string name="title_activity_login">LoginActivity</string>
 </resources>

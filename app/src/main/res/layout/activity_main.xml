@@ -10,10 +10,88 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Családtag Adatbázis"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Keresztnév"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"/>
+
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Vezetéknév"
+        app:layout_constraintTop_toBottomOf="@+id/firstName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"/>
+
+    <EditText
+        android:id="@+id/birthPlace"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Születési hely"
+        app:layout_constraintTop_toBottomOf="@+id/lastName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"/>
+
+    <EditText
+        android:id="@+id/birthDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Születési dátum (YYYY-MM-DD)"
+        app:layout_constraintTop_toBottomOf="@+id/birthPlace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"/>
+
+    <EditText
+        android:id="@+id/parentId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Szülő azonosítója (pl.: ABCD-EFGH)"
+        app:layout_constraintTop_toBottomOf="@+id/birthDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/addMemberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hozzáadás"
+        app:layout_constraintTop_toBottomOf="@+id/parentId"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/updateMemberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Módosítás"
+        app:layout_constraintTop_toBottomOf="@+id/parentId"
+        app:layout_constraintStart_toEndOf="@+id/addMemberButton"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/deleteMemberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Törlés"
+        app:layout_constraintTop_toBottomOf="@+id/parentId"
+        app:layout_constraintStart_toEndOf="@+id/updateMemberButton"
+        android:layout_margin="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
