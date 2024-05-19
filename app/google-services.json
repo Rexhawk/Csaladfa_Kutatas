@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "628807268538",
+    "project_id": "csaladfa-kutatas",
+    "storage_bucket": "csaladfa-kutatas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628807268538:android:a91add953038a08c406a83",
+        "android_client_info": {
+          "package_name": "com.example.csaladfa_kutatas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGssA4eg4nUnn0ftnAm_ofOjj2idVdILY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
