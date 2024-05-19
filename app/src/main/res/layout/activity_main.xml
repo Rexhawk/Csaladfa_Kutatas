@@ -8,21 +8,22 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Családtag Adatbázis"
+        android:text="Családfa Adatbázis"
+        android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp"
-        android:textSize="24sp"/>
+        android:padding="16dp"/>
 
     <EditText
         android:id="@+id/firstName"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Keresztnév"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="8dp"/>
@@ -30,7 +31,7 @@
     <EditText
         android:id="@+id/lastName"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Vezetéknév"
         app:layout_constraintTop_toBottomOf="@+id/firstName"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +41,7 @@
     <EditText
         android:id="@+id/birthPlace"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Születési hely"
         app:layout_constraintTop_toBottomOf="@+id/lastName"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +51,7 @@
     <EditText
         android:id="@+id/birthDate"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Születési dátum (YYYY-MM-DD)"
         app:layout_constraintTop_toBottomOf="@+id/birthPlace"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +61,7 @@
     <EditText
         android:id="@+id/parentId"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Szülő azonosítója (pl.: ABCD-EFGH)"
         app:layout_constraintTop_toBottomOf="@+id/birthDate"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,4 +95,40 @@
         app:layout_constraintStart_toEndOf="@+id/updateMemberButton"
         android:layout_margin="8dp"/>
 
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Keresés ID vagy név alapján"
+        app:layout_constraintTop_toBottomOf="@+id/addMemberButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keresés"
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/settings_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beállítások"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kilépés"
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText"
+        app:layout_constraintStart_toEndOf="@+id/searchButton"
+        android:layout_margin="8dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

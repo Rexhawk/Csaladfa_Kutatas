@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/user_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Felhasználói adatok"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Switch
+        android:id="@+id/save_data_switch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Adatok mentése lokálisan"/>
+
+    <Switch
+        android:id="@+id/notifications_switch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Értesítések bekapcsolása"/>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vissza"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>
