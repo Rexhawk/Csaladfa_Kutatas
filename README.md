@@ -32,20 +32,74 @@ Fő Funkciók és Felhasználásuk
    Adatok Lokális Mentése: Bekapcsolva az alkalmazás menti a családtagok adatait az eszközre.
    Értesítések Bekapcsolása: Bekapcsolva az alkalmazás értesítéseket küld, ha valaki módosítja a felhasználó által létrehozott családtagnak az adatait.
 
-Technikai Megvalósítás
 
-    Firebase autentikáció: A felhasználók regisztrálhatnak és bejelentkezhetnek Firebase autentikációval.
-    Adatmodell: A családtagok adatainak kezelésére a FamilyMember osztályt használjuk.
-    Különböző activityk használata: Három fő activity van: LoginActivity, RegisterActivity és MainActivity. Ezen kívül egy beállítási activity (SettingsActivity) is elérhető.
-    Beviteli mezők: Az email mezők megfelelő billentyűzetet jelenítenek meg, a jelszó mezők csillagozva vannak.
-    Layoutok: Az alkalmazás ConstraintLayout-ot és LinearLayout-ot használ.
-    Reszponzív design: Az alkalmazás különböző kijelzőméreteken és elforgatás esetén is megfelelően jelenik meg.
-    Animációk: Legalább két animáció használata biztosítja a felhasználói élményt (pl. activity váltások során).
-    Intentek használata: Navigáció az activityk között intentekkel történik.
-    Lifecycle Hook: Az onStart metódusban kezeljük az értesítések figyelését a Firestore adatbázisban.
-    Permission használata: Az alkalmazás írási engedélyt kér az adatok lokális mentéséhez és értesítési engedélyt az értesítésekhez.
-    Notification: Értesítések kezelése, ha valaki módosítja a felhasználó által létrehozott adatokat.
-    Firestore lekérdezések: Két komplex Firestore lekérdezés van megvalósítva, amelyek where feltételt és rendezést használnak.
+Firebase autentikáció megvalósítva (bejelentkezés és regisztráció):
+
+    LoginActivity és RegisterActivity: Ezekben az activity-kben történik a felhasználói bejelentkezés és regisztráció a Firebase segítségével.
+    Kód helye: LoginActivity.java és RegisterActivity.java
+
+Adatmodell definiálása (class vagy interfész formájában):
+
+    FamilyMember osztály: Az adatmodell a FamilyMember osztályban van definiálva, amely a családtagok adatait tartalmazza.
+    Kód helye: FamilyMember.java
+
+Legalább 3 különböző activity vagy fragment használata:
+
+    LoginActivity, RegisterActivity, MainActivity, és SettingsActivity: Az alkalmazás több activity-t is használ.
+    Kód helye: LoginActivity.java, RegisterActivity.java, MainActivity.java, SettingsActivity.java
+
+Beviteli mezők beviteli típusa megfelelő:
+
+    Email mezők: inputType="textEmailAddress" használata.
+    Jelszó mezők: inputType="textPassword" használata.
+    Kód helye: activity_login.xml és activity_register.xml
+
+ConstraintLayout és még egy másik layout típus használata:
+
+    ConstraintLayout: A fő layout az alkalmazásban.
+    LinearLayout: Használatos például a regisztrációs oldalon.
+    Kód helye: activity_main.xml és activity_register.xml
+
+Reszponzív dizájn:
+
+    Az alkalmazás különböző kijelzőméreteken és elforgatás esetén is jól jelenik meg.
+    Kód helye: Minden layout XML fájl (activity_main.xml, activity_login.xml, activity_register.xml).
+
+Legalább 2 különböző animáció használata:
+
+    Animációk az activity váltások során.
+    Kód helye: Például MainActivity.java és LoginActivity.java között váltáskor.
+
+Intentek használata:
+
+    Navigáció: Intentek használata az activity-k közötti navigációhoz.
+    Kód helye: LoginActivity.java, RegisterActivity.java, MainActivity.java, SettingsActivity.java
+
+Legalább egy Lifecycle Hook használata:
+
+    onStart: Értesítések figyelése a Firestore adatbázisban.
+    Kód helye: MainActivity.java
+
+Legalább egy androidos erőforrás használata, amihez kell android permission:
+
+    Írási engedély: Az adatok lokális mentéséhez.
+    Értesítési engedély: Értesítésekhez.
+    Kód helye: MainActivity.java és SettingsActivity.java
+
+Legalább egy notification vagy alarm manager vagy job scheduler használata:
+
+    Értesítések kezelése: Adatbázis változásainak figyelésére értesítések küldése.
+    Kód helye: MainActivity.java és SettingsActivity.java
+
+CRUD műveletek mindegyike megvalósult:
+
+    Adatbázis műveletek: Adatok hozzáadása, olvasása, frissítése és törlése.
+    Kód helye: MainActivity.java
+
+Legalább 2 komplex Firestore lekérdezés megvalósítása:
+
+    Lekérdezések: Két komplex Firestore lekérdezés (where feltétel és rendezés).
+    Kód helye: MainActivity.java
 
 Összefoglalás
 
